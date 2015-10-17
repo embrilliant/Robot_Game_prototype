@@ -8,16 +8,17 @@ $(function() {
 	function down() {
 		var ranLeft = ran(900, 50),
 			boardLeft = ranLeft - 75;
-		$("#div2").animate({top: "+=500px", left: ranLeft }, 1000, up);
-		$("#div1").animate({left: boardLeft}, 1000);
+		$("#div2").animate({top: "+=420px", left: ranLeft }, 800, up);
+		$("#div1").animate({left: boardLeft}, 800);
 	}
 
 	function up() {
-		$("#div2").animate({top: "-=500px", left: ran(900, 50) }, 1000, down);
+		var ranLeft = ran(900, 50),
+			boardLeft = ranLeft - 75;
+		$("#div2").animate({top: "-=420px", left: ranLeft }, 800, down);
+		$("#div3").animate({left: boardLeft}, 800);
 	}
 
-	down();			
+	down();		
 
 });
-
-
